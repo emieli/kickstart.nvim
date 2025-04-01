@@ -1,5 +1,26 @@
 # kickstart.nvim
 
+## Emil Installation
+```
+sudo apt update
+sudo apt upgrade
+sudo apt install python3-pip python3-venv ripgrep tmux
+cd ~/
+# ruff
+curl -LsSf https://astral.sh/ruff/install.sh | sh
+# nodejs for pyright
+curl -fsSL https://deb.nodesource.com/setup_23.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt-get install nodejs -yo
+# neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gzo
+echo "export PATH="$PATH:/opt/nvim-linux-x86_64/bin" > .bashrc
+cd .config && git clone git@github.com:emieli/kickstart.nvim.git nvim
+```
+*Don't forget tmux.conf settings*
+
 ## Introduction
 
 A starting point for Neovim that is:
