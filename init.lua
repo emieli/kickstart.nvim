@@ -290,6 +290,16 @@ require('lazy').setup({
   -- Then, because we use the `opts` key (recommended), the configuration runs
   -- after the plugin has been loaded as `require(MODULE).setup(opts)`.
 
+  { -- Remove ">" tab-char in .go files: https://www.reddit.com/r/neovim/comments/17zon3d/why_am_i_having_this_arrows_at_the_front_of_every/
+    'lukas-reineke/indent-blankline.nvim',
+    main = 'ibl',
+    opts = {
+      indent = {
+        char = '▎',
+        tab_char = '▎', -- This was the fix
+      },
+    },
+  },
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
