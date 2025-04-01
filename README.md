@@ -4,7 +4,7 @@
 ```
 sudo apt update
 sudo apt upgrade
-sudo apt install python3-pip python3-venv ripgrep tmux
+sudo apt install python3-pip python3-venv ripgrep tmux git make unzip gcc
 cd ~/
 # ruff
 curl -LsSf https://astral.sh/ruff/install.sh | sh
