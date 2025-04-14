@@ -18,6 +18,9 @@ sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gzo
 echo "export PATH="$PATH:/opt/nvim-linux-x86_64/bin" > .bashrc
 cd .config && git clone git@github.com:emieli/kickstart.nvim.git nvim
+# Jinja-LSP
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+bash && cargo install jinja-lsp
 ```
 *Don't forget tmux.conf settings*
 
